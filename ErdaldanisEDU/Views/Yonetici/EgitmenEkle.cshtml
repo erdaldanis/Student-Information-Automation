@@ -1,0 +1,52 @@
+﻿
+@model ErdaldanisEDU.Models.EgitmenEkle
+
+@{
+
+
+}
+    <div class="container-fluid">
+
+        <!-- left column -->
+        <!-- general form elements -->
+        <div class="card card-primary">
+            <div class="card-header">
+                <h2 class="card-title"> Eğitmen Ekle - ErdaldanisEDU</h2>
+            </div>
+            <div class="card-body">
+                @using (Html.BeginForm("EgitmenEkle", "Yonetici", FormMethod.Post))
+                {
+
+
+                    @Html.DisplayName("Adı")
+                    @Html.TextBoxFor(k => k.adi, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(k => k.adi, null, new { @class = "text-danger" })<br />
+                    @Html.DisplayName("Soyadı")<br />
+                    @Html.TextBoxFor(k => k.soyadi, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(k => k.soyadi, null, new { @class = "text-danger" })<br />
+                    @Html.DisplayName("Bölümü")<br />
+                    @Html.TextBoxFor(k => k.bolum, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(k => k.bolum, null, new { @class = "text-danger" })<br />
+                    @Html.DisplayName("Kullanıcı Adı")<br />
+                    @Html.TextBoxFor(k => k.username, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(k => k.username, null, new { @class = "text-danger" })<br />
+                    @Html.DisplayName("E-Postası")<br />
+                    @Html.TextBoxFor(k => k.email, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(k => k.email, null, new { @class = "text-danger" })<br />
+                    @Html.DisplayName("Parolası")<br />
+                    @Html.TextBoxFor(k => k.password, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(k => k.password, null, new { @class = "text-danger" })<br />
+                    @Html.DisplayName("Fakülte")<br />
+                    @Html.TextBoxFor(k => k.fakulte, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(k => k.fakulte, null, new { @class = "text-danger" })<br />
+
+                    <br />
+                    if (ViewBag.sonuc != null)
+                    {
+                        <div class="alert alert-success"> @ViewBag.sonuc</div>
+                    }
+                    <input type="submit" value="Kaydet" class="btn btn-success" />
+                }
+            </div>
+            </div>
+        </div>

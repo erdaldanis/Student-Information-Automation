@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ErdaldanisEDUModelStoreContainer" CdmEntityContainer="ErdaldanisEDUdb">
+    <EntitySetMapping Name="YoneticiGiris">
+      <EntityTypeMapping TypeName="ErdaldanisEDUModel.YoneticiGiris">
+        <MappingFragment StoreEntitySet="YoneticiGiris">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EgitmenEkle">
+      <EntityTypeMapping TypeName="ErdaldanisEDUModel.EgitmenEkle">
+        <MappingFragment StoreEntitySet="EgitmenEkle">
+          <ScalarProperty Name="fakulte" ColumnName="fakulte" />
+          <ScalarProperty Name="egitmenId" ColumnName="egitmenId" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="bolum" ColumnName="bolum" />
+          <ScalarProperty Name="soyadi" ColumnName="soyadi" />
+          <ScalarProperty Name="adi" ColumnName="adi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

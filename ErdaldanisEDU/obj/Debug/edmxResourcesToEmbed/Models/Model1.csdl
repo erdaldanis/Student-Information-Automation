@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ErdaldanisEDUModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="YoneticiGiris">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="ErdaldanisEDUdb" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="YoneticiGiris" EntityType="Self.YoneticiGiris" />
+    <EntitySet Name="EgitmenEkle" EntityType="ErdaldanisEDUModel.EgitmenEkle" />
+  </EntityContainer>
+  <EntityType Name="EgitmenEkle">
+    <Key>
+      <PropertyRef Name="egitmenId" />
+    </Key>
+    <Property Name="adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="soyadi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="bolum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="egitmenId" Type="Int32" Nullable="false" />
+    <Property Name="fakulte" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

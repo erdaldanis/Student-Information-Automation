@@ -1,0 +1,46 @@
+﻿@model IEnumerable<ErdaldanisEDU.Models.EgitmenEkle>
+@{
+}
+    <div class="container-fluid">
+
+        <!-- left column -->
+        <!-- general form elements -->
+        <div class="card card-primary">
+            @Html.ActionLink("Yeni Kayıt", "EgitmenEkle", null, new { @class = "btn btn-primary" })<br />
+
+
+
+
+            <table class="table">
+                <tr>
+                    <td>KN</td>
+                    <td>Adı</td>
+                    <td>Soyadi</td>
+                    <td>Fakülte</td>
+                    <td>Bolum</td>
+                    <td>Kullanıcı Adı </td>
+                    <td>E-Posta</td>
+                    <td>Parola</td>
+                    <td>Düzenle</td>
+                    <td>Sil</td>
+
+
+                </tr>
+                @foreach (var kayit in Model)
+                {
+                    <tr>
+                        <td>@kayit.egitmenId</td>
+                        <td>@kayit.adi</td>
+                        <td>@kayit.soyadi</td>
+                        <td>@kayit.fakulte</td>
+                        <td>@kayit.bolum</td>
+                        <td>@kayit.username</td>
+                        <td>@kayit.email</td>
+                        <td>@kayit.password</td>
+                        <td>@Html.ActionLink("Düzenle", "EgitmenDuzenle", new { id = kayit.egitmenId }, new { @class = "btn btn-warning" })</td>
+                        <td>@Html.ActionLink("Sil", "EgitmenSil", new { id = kayit.egitmenId }, new { @class = "btn btn-warning" })</td>
+                    </tr>
+                }
+
+            </table>
+        </div> </div> </div>
