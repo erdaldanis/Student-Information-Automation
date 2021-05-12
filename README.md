@@ -1,0 +1,2 @@
+# OgrenciBilgiOtomasyonu
+OgrenciBilgiOtomasyonu
